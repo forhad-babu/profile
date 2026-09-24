@@ -527,6 +527,13 @@ section { padding:96px 60px; }
 .cert-placeholder.add { color:var(--card-accent); border-color:rgba(52,224,180,0.45); cursor:pointer; }
 .cert-placeholder.add:hover { color:#062017; border-color:var(--card-accent); background:var(--card-accent); }
 
+.cert-card.has-img { padding:14px 14px 18px; }
+.cert-img-link { display:block; border-radius:6px; overflow:hidden; background:#fff; }
+.cert-img-link img { width:100%; aspect-ratio:4/3; object-fit:contain; display:block; transition:transform 0.4s ease; }
+.cert-img-link:hover img { transform:scale(1.03); }
+.cert-title { font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--card-text); margin-top:14px; line-height:1.6; }
+.cert-grid.reveal-stagger.visible>*:nth-child(n+7){opacity:1;transform:none;transition-delay:0.35s}
+
 /* ── PHOTO GALLERY ── */
 #gallery { background: var(--bg); }
 .gallery-grid {
@@ -832,32 +839,17 @@ footer {
     <div class="section-label">About Me</div>
     <h2 class="section-title">Aspiring Researcher,<br><em>seeking opportunity</em></h2>
     <div class="about-text">
-      <p>I am <strong>Md. Forhad Babu</strong>, a final-year undergraduate student of
-        <em>Applied Chemistry and Chemical Engineering (ACCE)</em> at the University of Rajshahi,
-        Bangladesh, maintaining a CGPA of <strong>3.65 out of 4.00</strong>.</p>
+      <p>I am <strong>Md. Forhad Babu</strong>, a final-year undergraduate student in Applied Chemistry and Chemical Engineering (ACCE) at the University of Rajshahi, Bangladesh, with a CGPA of 3.65/4.00. My academic and research interests lie at the intersection of <strong>sustainable energy, advanced materials, computational chemistry, and electrochemistry</strong>, with a particular focus on developing materials and understanding molecular-level processes for clean energy applications.</p>
 
-      <p>My primary research interests encompass <strong>renewable energy materials</strong>
-        (Dye-Sensitized Solar Cells and Perovskite Solar Cells), <strong>computational chemistry</strong>
-        (Density Functional Theory), <strong>electrochemistry and corrosion science</strong>,
-        <strong>battery and energy storage systems</strong>, and <strong>nanomaterials</strong>
-        for catalysis and energy applications. I am proficient in simulation tools including
-        Gaussian, GaussView, Material Studio, CAPS1D, MATLAB, and OriginPro.</p>
+      <p>My primary research interests include <strong>Dye-Sensitized Solar Cells (DSSCs), Perovskite Solar Cells, battery and energy-storage technologies, and nanomaterials energy applications and Wastewater Treatment, Density Functional Theory (DFT), electrochemistry and corrosion science</strong>. I have developed practical experience with computational and scientific tools including <strong>Gaussian, GaussView, Materials Studio, CAPS1D, MATLAB, OriginPro, Data analysis with R and Python Programming</strong>, and I am particularly interested in applying computational approaches to complement experimental research and accelerate materials discovery.</p>
 
-      <p>I have served in several leadership and organizational roles throughout my academic career,
-        including as <strong>President of USASS</strong>, Vice President and IT &amp; Media Secretary
-        of RUHERF, and in executive capacities across multiple student associations. These experiences
-        have strengthened my ability to lead, communicate, and collaborate in team environments.</p>
+      <p>Beyond academics, I have actively contributed to student-led academic and research communities through leadership and organizational roles. I currently serve as <strong>President of the Rajshahi University Higher Education and Research Forum (RUHERF) and President of the University Students' Association of Sariakandi-Sonatola (USASS)</strong>, along with holding executive responsibilities in several other student organizations. These experiences have strengthened my leadership, communication, project coordination, teamwork, and ability to work effectively with diverse groups toward shared academic goals.</p>
 
-      <p>My long-term professional goal is to contribute to sustainable energy solutions through
-        advanced research and academia. To pursue this, I am actively seeking a
-        <strong>fully-funded Master's or PhD program abroad</strong>, where I can work alongside
-        leading researchers in energy materials and computational chemistry. As a student from
-        a developing country with limited financial resources, a <em>full scholarship</em> is
-        essential for me to access world-class research infrastructure and realize my academic potential.</p>
+      <p>My long-term goal is to build a research career in <strong>sustainable energy and advanced materials</strong>, ultimately contributing to both academia and technological innovation. I am particularly motivated to pursue graduate study in an environment where I can work with leading researchers, gain advanced research training, and contribute to interdisciplinary projects addressing challenges in clean energy, energy storage, and materials innovation.</p>
 
-      <p>I am driven by the conviction that science must serve society — and I am committed to
-        building a research career that addresses pressing global challenges in clean energy and
-        materials innovation.</p>
+      <p>As a student from Bangladesh, access to advanced research facilities and international research environments is a significant challenge without financial support. Therefore, I am actively seeking a <strong>fully funded Master's or PhD opportunity abroad</strong> that will allow me to develop as an independent researcher while contributing meaningfully to my research group and the broader scientific community. I see graduate education not simply as the next academic step, but as an opportunity to transform my curiosity and research potential into impactful scientific contributions.</p>
+
+      <p>I am driven by the belief that science is most meaningful when it contributes to society. Through advanced education, collaborative research, and persistent learning, I aspire to contribute to the development of sustainable energy technologies and materials that can help address some of the world's most pressing environmental and energy challenges.</p>
     </div>
     <div class="cgpa-bar">
       <div class="cgpa-label">Academic Performance (CGPA) <span>3.65 / 4.00</span></div>
@@ -885,6 +877,8 @@ footer {
         <span class="skill-tag tech">CAPS1D</span>
         <span class="skill-tag tech">MATLAB</span>
         <span class="skill-tag tech">OriginPro</span>
+        <span class="skill-tag tech">R for Data Analysis</span>
+        <span class="skill-tag tech">Python for Data Analysis</span>
         <span class="skill-tag tech">HTML</span>
         <span class="skill-tag tech">Scientific Writing</span>
         <span class="skill-tag tech">MS Office</span>
@@ -1085,13 +1079,59 @@ footer {
     <h2 class="section-title">Certificates &amp; <em>Awards</em></h2>
   </div>
   <div class="cert-grid reveal-stagger">
-    <div class="cert-card"><div class="cert-placeholder add">+ Add Certificate</div></div>
-    <div class="cert-card"><div class="cert-placeholder add">+ Add Certificate</div></div>
-    <div class="cert-card"><div class="cert-placeholder add">+ Add Certificate</div></div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="1.%20BCSIR_instrumental_training.jpeg" target="_blank" rel="noopener"><img src="1.%20BCSIR_instrumental_training.jpeg" alt="BCSIR Instrumental Training" loading="lazy"></a>
+      <div class="cert-title">BCSIR Instrumental Training</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="2.%20ruher_researchtrainig_chief-coordinator.jpeg" target="_blank" rel="noopener"><img src="2.%20ruher_researchtrainig_chief-coordinator.jpeg" alt="RUHER Research Training — Chief Coordinator" loading="lazy"></a>
+      <div class="cert-title">RUHER Research Training — Chief Coordinator</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="3.%20BEIS_conference_presenter.png" target="_blank" rel="noopener"><img src="3.%20BEIS_conference_presenter.png" alt="BEIS Conference — Presenter" loading="lazy"></a>
+      <div class="cert-title">BEIS Conference — Presenter</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="4.%20BAS_Conference.jpeg" target="_blank" rel="noopener"><img src="4.%20BAS_Conference.jpeg" alt="BAS Conference" loading="lazy"></a>
+      <div class="cert-title">BAS Conference</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="5.%20DUACS_Conference.jpeg" target="_blank" rel="noopener"><img src="5.%20DUACS_Conference.jpeg" alt="DUACS Conference" loading="lazy"></a>
+      <div class="cert-title">DUACS Conference</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="6.%203DPrinting_American%20Corner_VU.jpeg" target="_blank" rel="noopener"><img src="6.%203DPrinting_American%20Corner_VU.jpeg" alt="3D Printing — American Corner, VU" loading="lazy"></a>
+      <div class="cert-title">3D Printing — American Corner, VU</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="7.%20PCRC.jpg" target="_blank" rel="noopener"><img src="7.%20PCRC.jpg" alt="PCRC" loading="lazy"></a>
+      <div class="cert-title">PCRC</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="8.%20Excel_uniathena.jpg" target="_blank" rel="noopener"><img src="8.%20Excel_uniathena.jpg" alt="Excel — UniAthena" loading="lazy"></a>
+      <div class="cert-title">Excel — UniAthena</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="9.%20ShishuUllash_trainign.jpeg" target="_blank" rel="noopener"><img src="9.%20ShishuUllash_trainign.jpeg" alt="Shishu Ullash Training" loading="lazy"></a>
+      <div class="cert-title">Shishu Ullash Training</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="10.%20BZA_IT.jpg" target="_blank" rel="noopener"><img src="10.%20BZA_IT.jpg" alt="BZA IT" loading="lazy"></a>
+      <div class="cert-title">BZA IT</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="11.%20ruherf_summit_2025_volunteer.png" target="_blank" rel="noopener"><img src="11.%20ruherf_summit_2025_volunteer.png" alt="RUHERF Summit 2025 — Volunteer" loading="lazy"></a>
+      <div class="cert-title">RUHERF Summit 2025 — Volunteer</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="13.%20ruherf_summit_2025_participants.png" target="_blank" rel="noopener"><img src="13.%20ruherf_summit_2025_participants.png" alt="RUHERF Summit 2025 — Participant" loading="lazy"></a>
+      <div class="cert-title">RUHERF Summit 2025 — Participant</div>
+    </div>
+    <div class="cert-card has-img">
+      <a class="cert-img-link" href="14.%20Alchemi_postar%20presentation_ACCE-RU.jpeg" target="_blank" rel="noopener"><img src="14.%20Alchemi_postar%20presentation_ACCE-RU.jpeg" alt="Alchemi — Poster Presentation, ACCE-RU" loading="lazy"></a>
+      <div class="cert-title">Alchemi — Poster Presentation, ACCE-RU</div>
+    </div>
   </div>
-  <p style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);margin-top:18px;letter-spacing:0.08em;">
-    Replace the placeholder cards with your earned certificates by editing the HTML.
-  </p>
 </section>
 
 <!-- ── PHOTO GALLERY ── -->
